@@ -1,5 +1,6 @@
 import React from 'react'
 import { Card } from 'react-bootstrap'
+import Reacting from './Reacting'
 
 function Product({ product }) {
   return (
@@ -16,7 +17,7 @@ function Product({ product }) {
             </a>
             <Card.Text as="div">
                 <div className='my-3'>
-                    {product.like} from {product.numLike} likes
+                    <Reacting value={product.reacting} text={`${product.numReacted} reacts`} color={'#0000ff'} />
                 </div>
             </Card.Text>
 
